@@ -6,7 +6,7 @@ RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|
 RUN yum update -y
 RUN yum install -y httpd zip unzip
 # COPY https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html/
-RUN curl https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip
+RUN curl -O https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip
 RUN tar -xjC /var/www/html/ photogenic.zip
 WORKDIR /var/www/html/
 RUN unzip photogenic.zip
