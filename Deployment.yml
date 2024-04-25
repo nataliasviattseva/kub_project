@@ -1,19 +1,19 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: k_project
+  name: kproject
 spec:
   replicas: 2
   selector:      # tells the controller which pods to watch/belong to
     matchLabels:
-      app: k_project
+      app: kproject
   template:
     metadata:
       labels:
-        app: k_project
+        app: kproject
     spec:
       containers:
-      - name: k_progect
+      - name: kprogect
         image: nataliasv/pipeline
         imagePullPolicy: Always
         ports:
